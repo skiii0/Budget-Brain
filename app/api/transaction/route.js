@@ -1,5 +1,5 @@
 import arcjet, { shield, detectBot } from "@arcjet/next";
-import { seedTransactions } from "@/actions/seed";
+import { prisma } from "@/lib/db";
 
 const aj = arcjet({
   key: process.env.ARCJET_KEY,
@@ -9,13 +9,18 @@ const aj = arcjet({
   ],
 });
 
-export async function GET(req) {
+export async function POST(req) {
   const decision = await aj.protect(req);
 
   if (decision.isDenied()) {
     return new Response("Blocked", { status: 403 });
   }
 
-  const result = await seedTransactions();
-  return Response.json(result);
+  const body = await req.json();
+
+  const transaction = await prisma.transaction.create({
+    data: body,
+  });
+
+  return Response.json(transaction);
 }
