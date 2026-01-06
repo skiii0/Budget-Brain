@@ -4,7 +4,7 @@ export const defaultCategories = [
     id: "salary",
     name: "Salary",
     type: "INCOME",
-    color: "#22c55e", // green-500
+    color: "#309b57ff", // green-500
     icon: "Wallet",
   },
   {

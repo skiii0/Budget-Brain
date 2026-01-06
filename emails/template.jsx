@@ -10,7 +10,7 @@ import {
 } from "@react-email/components";
 
 // Dummy data for preview
-const PREVIEW_DATA = {
+/*const PREVIEW_DATA = {
   monthlyReport: {
     userName: "John Doe",
     type: "monthly-report",
@@ -44,6 +44,7 @@ const PREVIEW_DATA = {
     },
   },
 };
+*/
 
 export default function EmailTemplate({
   userName = "",
@@ -110,7 +111,7 @@ export default function EmailTemplate({
             )}
 
             <Text style={styles.footer}>
-              Thank you for using Welth. Keep tracking your finances for better
+              Thank you for using Budget Brain. Keep tracking your finances for better
               financial health!
             </Text>
           </Container>

@@ -98,7 +98,7 @@ export function AccountChart({ transactions }) {
         <div className="flex justify-around mb-6 text-sm">
           <div className="text-center">
             <p className="text-muted-foreground">Total Income</p>
-            <p className="text-lg font-bold text-green-500">
+            <p className="text-lg font-bold text-pink-500">
               ${totals.income.toFixed(2)}
             </p>
           </div>

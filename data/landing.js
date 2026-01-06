@@ -10,11 +10,11 @@ import {
 // Stats Data
 export const statsData = [
   {
-    value: "50K+",
+    value: "10K+",
     label: "Active Users",
   },
   {
-    value: "$2B+",
+    value: "$1M+",
     label: "Transactions Tracked",
   },
   {
@@ -22,7 +22,7 @@ export const statsData = [
     label: "Uptime",
   },
   {
-    value: "4.9/5",
+    value: "4.8/5",
     label: "User Rating",
   },
 ];
@@ -31,9 +31,9 @@ export const statsData = [
 export const featuresData = [
   {
     icon: <BarChart3 className="h-8 w-8 text-blue-600" />,
-    title: "Advanced Analytics",
+    title: "Deep Spending Insights",
     description:
-      "Get detailed insights into your spending patterns with AI-powered analytics",
+      "Gain clear visibility into your finances with intelligent analysis of your spending behavior.",
   },
   {
     icon: <Receipt className="h-8 w-8 text-blue-600" />,
@@ -43,23 +43,23 @@ export const featuresData = [
   },
   {
     icon: <PieChart className="h-8 w-8 text-blue-600" />,
-    title: "Budget Planning",
-    description: "Create and manage budgets with intelligent recommendations",
+    title: "Intelligent Budgeting",
+    description: "Plan, track, and optimize your budgets with smart suggestions tailored to your habits.",
   },
   {
     icon: <CreditCard className="h-8 w-8 text-blue-600" />,
-    title: "Multi-Account Support",
+    title: "Unified Account Management",
     description: "Manage multiple accounts and credit cards in one place",
   },
   {
     icon: <Globe className="h-8 w-8 text-blue-600" />,
-    title: "Multi-Currency",
-    description: "Support for multiple currencies with real-time conversion",
+    title: "Global Currency Support",
+    description: "Track expenses across currencies with accurate, real-time exchange rates.",
   },
   {
     icon: <Zap className="h-8 w-8 text-blue-600" />,
     title: "Automated Insights",
-    description: "Get automated financial insights and recommendations",
+    description: "Receive actionable insights and suggestions to improve your financial decisions.",
   },
 ];
 
@@ -92,7 +92,7 @@ export const testimonialsData = [
     role: "Small Business Owner",
     image: "https://randomuser.me/api/portraits/women/75.jpg",
     quote:
-      "Welth has transformed how I manage my business finances. The AI insights have helped me identify cost-saving opportunities I never knew existed.",
+      "Budget Brain has transformed how I manage my business finances. The AI insights have helped me identify cost-saving opportunities I never knew existed.",
   },
   {
     name: "Michael Chen",
@@ -106,6 +106,6 @@ export const testimonialsData = [
     role: "Financial Advisor",
     image: "https://randomuser.me/api/portraits/women/74.jpg",
     quote:
-      "I recommend Welth to all my clients. The multi-currency support and detailed analytics make it perfect for international investors.",
+      "I recommend Budget Brain to all my clients. The multi-currency support and detailed analytics make it perfect for international investors.",
   },
 ];
