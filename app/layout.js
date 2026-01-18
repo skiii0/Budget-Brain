@@ -13,22 +13,39 @@ export const metadata = {
   description: "Smart personal finance & budgeting platform",
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" className="dark">
         <head>
           <link rel="icon" href="/logo-sm.png" sizes="any" />
         </head>
-        <body className={`${inter.className}`}>
+
+        <body
+          className={`
+            ${inter.className}
+            min-h-screen
+            antialiased
+            transition-colors duration-300
+          `}
+        >
+          {/* Header */}
           <Header />
-          <main className="min-h-screen">{children}</main>
+
+          {/* Main Content */}
+          <main className="min-h-screen px-4 md:px-8 pt-6">
+            {children}
+          </main>
+
+          {/* Toaster */}
           <Toaster richColors />
 
-          <footer className="bg-blue-50 py-12">
-            <div className="container mx-auto px-4 text-center text-purple-600">
-              <p>Crafted by Sakshi💗</p>
+          {/* Footer */}
+          <footer className="mt-20 border-t border-border bg-transparent">
+            <div className="container mx-auto px-4 py-10 text-center">
+              <p className="text-sm text-muted-foreground">
+                Crafted by <span className="text-neonBlue font-medium">Sakshi</span> 💗
+              </p>
             </div>
           </footer>
         </body>

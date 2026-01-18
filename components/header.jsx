@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { PenBox, LayoutDashboard } from "lucide-react";
 import Link from "next/link";
 import AuthButtons from "./auth-buttons";
 import { SignedOut } from "@clerk/nextjs";
@@ -11,35 +10,58 @@ const Header = async () => {
   await checkUser();
 
   return (
-    <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/">
-          <Image
-            src={"/logo.png"}
-            alt="Budget Brain Logo"
-            width={160}
-            height={48}
-            priority
-          />
+    <header
+      className="
+        fixed top-4 left-1/2 -translate-x-1/2
+        w-[95%] max-w-7xl
+        bg-panel backdrop-blur-glass
+        border border-panelBorder
+        rounded-2xl
+        z-50
+        shadow-glass
+      "
+    >
+      <nav className="px-6 py-4 flex items-center justify-between">
+
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2">
+          <span className="text-2xl font-extrabold tracking-tight">
+            <span className="text-neonBlue drop-shadow-[0_0_8px_rgba(30,144,255,0.6)]">Budget</span>
+            <span className="text-white">Brain</span>
+          </span>
         </Link>
 
-        {/* Navigation Links - Different for signed in/out users */}
-        <div className="hidden md:flex items-center space-x-8">
+        {/* Navigation Links (Signed Out only) */}
+        <div className="hidden md:flex items-center gap-8">
           <SignedOut>
-            <a href="#features" className="text-purple-500 hover:text-blue-500">
+            <a
+              href="#features"
+              className="
+                text-muted-foreground
+                hover:text-neonBlue
+                transition
+              "
+            >
               Features
             </a>
             <a
               href="#testimonials"
-              className="text-purple-500 hover:text-blue-500"
+              className="
+                text-muted-foreground
+                hover:text-neonBlue
+                transition
+              "
             >
               Testimonials
             </a>
           </SignedOut>
         </div>
 
-        {/* Action Buttons */}
-        <AuthButtons />
+        {/* Auth Buttons */}
+        <div className="flex items-center gap-4">
+          <AuthButtons />
+        </div>
+
       </nav>
     </header>
   );
